@@ -68,3 +68,11 @@
 .btn-info {
   margin-left: 60px;
 }
+.badge {
+  position: absolute;
+  width: 15%;
+}
+.badge:hover {
+  transform: rotate(45deg);
+  cursor: pointer;
+}
