@@ -394,10 +394,10 @@ function sumAllTheYears () {
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
 
-function searchByTitle(str) {
+function searchByTitle(lord) {
     let result = []
     for(let i = 0; i < movies.length; i++){
-        if (movies[i].Title.indexOf(str) !== -1)
+        if (movies[i].Title.indexOf(lord) !== -1)
             result.push(movies[i])
     }
 }
