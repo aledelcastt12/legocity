@@ -470,7 +470,7 @@ function tree(number){
     for (let i = 0; i < number; i++){
         let build1 = "*".repeat(2 * i +1)
         let build2 = " ".repeat(number - i - 1)
-        console.log(build1 + build2)
+        console.log(build2 + build1)
     }
 }
 
