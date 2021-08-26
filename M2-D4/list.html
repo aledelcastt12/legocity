@@ -1,1 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height:100%;
+      }
+      .board {
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .main-board {
+        width: 798px;
+      }
+      .user-board {
+        width: 504px;
+        margin-bottom: 24px;
+      }
+      .cell {
+        width: 120px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid blue;
+      }
+      .t-center {
+        text-align: center;
+      }
 
+      .btn {
+        width: 20%;
+        margin-top: 30px;
+        padding: 7px;
+        background-color: royalblue;
+        border: none;
+      }
+      .input-number{
+        width: 20%;
+        margin-top: 20px;
+        padding: 7px;
+      }
+      input:focus {
+        outline: none;
+      }
+      .highlight {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="t-center">Bingo Board</h1>
+      <div class="main-board board"><div class="cell">lia</div><div class="cell">josh</div><div class="cell">liam</div><div class="cell">peter</div><div class="cell">joe</div><div class="cell">jack</div><div class="cell">tom</div><div class="cell">fray</div></div>
+  
+<input type="Name" id="usersName" class="input-name" placeholder="Name of users" value="1">
+
+<input type="button" id="randBtn" class="btn" value="Generate new member">
+
+      <input type="button" id="userBoardBtn" class="btn" value="Generate user boards">
+      <h5 id="randNum"></h5>
+    </div>
+
+    <script>
+Const user =document.querySelector(".input-name");
+
+      const generateMainBoard = function () {
+        const board = document.querySelector(".main-board");
+        for (let i = 0; i < 8; i++) {
+          board.innerHTML += `<div class='cell'>${i + 1}</div>`;
+        }
+      };
+
+      
+      const fillArray= function () {
+        const arr = [];
+        for (let i = 0; i < 8; i++) {
+          arr.push(i + 1);
+        }
+        return arr;
+      };
+     
+      const getRandomNum = function (range) {
+        const randIndex = Math.floor(Math.random() * range.length);
+        const random = range.splice(randIndex, 1)[0];
+        return random;
+      };
+
+      const generateRandNumber = function (range) {
+        const random = getRandomNum(range);
+        const randNumDiv = document.getElementById("randNum");
+        randNumDiv.innerText = "Number: " + random;
+        const cells = document.querySelectorAll(".main-board .cell");
+        cells[random - 1].classList.add("highlight");
+
+        const userCells = document.querySelectorAll(".user-board .cell");
+        userCells.forEach((cell) => {
+          if (parseInt(cell.innerText) === random) {
+            cell.classList.add("highlight");
+          }
+        });
+      };
+
+      const generateUserBoards = function () {
+        const usersNumber = document.getElementById("usersNumber").value;
+        const container = document.querySelector(".container");
+        if (parseInt(usersNumber) > 0) {
+          for (let i = 0; i < parseInt(usersNumber); i++) {
+            const range = fillArray();
+            const board = document.createElement("div");
+            board.className = "board user-board";
+            for (let i = 0; i < 24; i++) {
+              const random = getRandomNum(range);
+              board.innerHTML += `<div class='cell'>${random}</div>`;
+            }
+            container.appendChild(board);
+          }
+        }
+      };
+
+      window.onload = function () {
+       GenerateNewUser();
+        const randBtn = document.getElementById("randBtn");
+        const range = fillArray();
+        randBtn.addEventListener("click", function () {
+If ( user.name.value){
+Const load =document.createElement("div");
+          GenerateNewUser(name);
+        });
+        const userBoardBtn = document.getElementById("userBoardBtn");
+        userBoardBtn.onclick = generateUserBoards;
+      };
+    </script>
+  
+
+</body>
+</html>
