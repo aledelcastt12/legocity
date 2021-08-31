@@ -22,7 +22,7 @@ const cont = document.querySelector('.Jumbotron');
 const font = document.querySelector('.font-italic')
 
 function addLink(){
-   bt.innerHTML = "<a class="p-2 text-muted" href="#">World</a>"
+   bt.innerHTML = "<a class="p-2 text-muted" href="#">Hola</a>";
 };
 
 
