@@ -21,10 +21,14 @@ const bt= document.querySelector('.nav d-flex');
 const cont = document.querySelector('.Jumbotron');
 const font = document.querySelector('.font-italic')
 
-function addLink(){
-   bt.innerHTML = "<a class="p-2 text-muted" href="#">Hola</a>";
-};
-
+function addLink() {
+  const link = document.createElement("a");
+  link.innerText = "hello";
+  link.setAttribute("class", "p-2 text-muted");
+  link.setAttribute("href", "#");
+  bt.appendChild(link);
+}
+addLink(bt);
 
 function changeColor() {
 cont.style.color = 'red'
