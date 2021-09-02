@@ -1,0 +1,80 @@
+@keyframes fadeAndScale {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  70% {
+    opacity: 0;
+    transform: scale3d(0.75, 0.75, 1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.p-5 {
+  animation: fadeAndScale 1s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  animation-delay: -0.2s;
+  transform-origin: center bottom;
+}
+
+.p-5 img {
+  animation: fadeAndScale 2s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+.p-5 h1 {
+  animation: fadeAndScale 3s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+.p-5 p {
+  animation: fadeAndScale 4s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+.p-5 button {
+  animation: fadeAndScale 5s cubic-bezier(0.39, -1.05, 0.58, 1.95);
+  transform-origin: center bottom;
+}
+.post {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 1000px;
+  margin: auto;
+}
+.post .card .card-body {
+  visibility: hidden;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+.post .card:hover .card-body {
+  visibility: visible;
+  display: block;
+  opacity: 1;
+  margin-top: 0px;
+  cursor: pointer;
+}
+
+.post .card:hover .card-body .btn {
+  margin-top: 20px;
+}
+.btn {
+  box-shadow: 2px 2px 2px 2px #000;
+  margin-left: 0rem auto;
+  font-size: 8px;
+}
+.btn .btn-info:hover {
+  background: royalblue;
+}
+.btn-info {
+  margin-left: 60px;
+}
+.badge {
+  position: absolute;
+  width: 18%;
+}
+.badge:hover {
+  transform: rotate(45deg);
+  cursor: pointer;
+}
