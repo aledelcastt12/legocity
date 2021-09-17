@@ -1,6 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <style>
       .container {
         display: flex;
@@ -8,7 +8,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height:100%;
+        height: 100%;
       }
       .board {
         margin: 0 auto;
@@ -41,7 +41,7 @@
         background-color: royalblue;
         border: none;
       }
-      .input-number{
+      .input-number {
         width: 20%;
         margin-top: 20px;
         padding: 7px;
@@ -53,22 +53,48 @@
         background-color: red;
       }
     </style>
+    <title>Lista de Usuarios</title>
   </head>
   <body>
     <div class="container">
       <h1 class="t-center">Bingo Board</h1>
-      <div class="main-board board"><div class="cell">lia</div><div class="cell">josh</div><div class="cell">liam</div><div class="cell">peter</div><div class="cell">joe</div><div class="cell">jack</div><div class="cell">tom</div><div class="cell">fray</div></div>
-  
-<input type="Name" id="usersName" class="input-name" placeholder="Name of users" value="1">
+      <div class="main-board board">
+        <div class="cell">lia</div>
+        <div class="cell">josh</div>
+        <div class="cell">liam</div>
+        <div class="cell">peter</div>
+        <div class="cell">joe</div>
+        <div class="cell">jack</div>
+        <div class="cell">tom</div>
+        <div class="cell">fray</div>
+      </div>
 
-<input type="button" id="randBtn" class="btn" value="Generate new member">
+      <input
+        type="Name"
+        id="usersName"
+        class="input-name"
+        placeholder="Name of users"
+        value="1"
+      />
 
-      <input type="button" id="userBoardBtn" class="btn" value="Generate user boards">
+      <input
+        type="button"
+        id="randBtn"
+        class="btn"
+        value="Generate new member"
+      />
+
+      <input
+        type="button"
+        id="userBoardBtn"
+        class="btn"
+        value="Generate user boards"
+      />
       <h5 id="randNum"></h5>
     </div>
 
     <script>
-Const user =document.querySelector(".input-name");
+      const user = document.querySelector(".input-name");
 
       const generateMainBoard = function () {
         const board = document.querySelector(".main-board");
@@ -77,15 +103,14 @@ Const user =document.querySelector(".input-name");
         }
       };
 
-      
-      const fillArray= function () {
+      const fillArray = function () {
         const arr = [];
         for (let i = 0; i < 8; i++) {
           arr.push(i + 1);
         }
         return arr;
       };
-     
+
       const getRandomNum = function (range) {
         const randIndex = Math.floor(Math.random() * range.length);
         const random = range.splice(randIndex, 1)[0];
@@ -125,19 +150,18 @@ Const user =document.querySelector(".input-name");
       };
 
       window.onload = function () {
-       GenerateNewUser();
+        GenerateNewUser();
         const randBtn = document.getElementById("randBtn");
         const range = fillArray();
         randBtn.addEventListener("click", function () {
-If ( user.name.value){
-Const load =document.createElement("div");
-          GenerateNewUser(name);
+          if (user.name.value) {
+            const load = document.createElement("div");
+            GenerateNewUser(name);
+          }
+          const userBoardBtn = document.getElementById("userBoardBtn");
+          userBoardBtn.onclick = generateUserBoards;
         });
-        const userBoardBtn = document.getElementById("userBoardBtn");
-        userBoardBtn.onclick = generateUserBoards;
       };
     </script>
-  
-
-</body>
+  </body>
 </html>
