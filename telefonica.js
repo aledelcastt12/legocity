@@ -18,3 +18,13 @@ function checkUser() {
     }
   });
 }
+/* red abierta */ 
+const correct = document.querySelector(".hdr-search")
+
+function newView {
+    correct.addEventListener("onmouseover", function (e){
+        alert("los datos aleatorios no corresponden al codigo fuente");
+        correct.style.color = "red";
+    })
+}
+
