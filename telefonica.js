@@ -5,7 +5,7 @@ function checkUser() {
   usuario;
   /**
    * Describe this function...
-   * @param {IClientAPI} context registro numero 15
+   * @param {IClientAPI} context registro numero 15-20
    */
   usuario.addEventListener("click", function (e) {
     alert("los datos recibidos estan seguros");
