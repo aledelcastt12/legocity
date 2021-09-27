@@ -1,62 +1,36 @@
-.d-flex .p-2:first-child{
-     color:deepskyblue
- }
- .d-flex .p-2:nth-child(2){
-     color:crimson
-
+.d-flex .p-2:first-child {
+  color: deepskyblue;
 }
-.d-flex  .p-2:nth-child(3){
-    color:lightseagreen
+.d-flex .p-2:nth-child(2) {
+  color: crimson;
 }
-.d-flex .p-2:nth-child(4){
-    color:firebrick
-
+.d-flex .p-2:nth-child(3) {
+  color: lightseagreen;
 }
-.d-flex .p-2:nth-child(5){
-    color:cornflowerblue
+.d-flex .p-2:nth-child(4) {
+  color: firebrick;
 }
-.d-flex .p-2:nth-child(6){
-   color:black
+.d-flex .p-2:nth-child(5) {
+  color: cornflowerblue;
 }
-.d-flex .p-2:nth-child(7){
-color:blue
+.d-flex .p-2:nth-child(6) {
+  color: black;
 }
-.d-flex .p-2:nth-child(8){
-color:pink
+.d-flex .p-2:nth-child(7) {
+  color: blue;
 }
-.d-flex .p-2:nth-child(9){
-    color:green
+.d-flex .p-2:nth-child(8) {
+  color: pink;
 }
-.d-flex .p-2:nth-child(10){
-color:aqua
+.d-flex .p-2:nth-child(9) {
+  color: green;
 }
-.d-flex .p-2:nth-child(11){
-    color:deeppink
+.d-flex .p-2:nth-child(10) {
+  color: aqua;
 }
-.d-flex .p-2:last-child{
-color:chartreuse;
+.d-flex .p-2:nth-child(11) {
+  color: deeppink;
 }
-#read{
-
+.d-flex .p-2:last-child {
+  color: chartreuse;
 }
-.blog-post  > .blog-post-title{
-
-}
-
-.d-flex .p-2:nth-child(even){
-    
-    }
- #second{
-
-    }
-   .p-4 .list-unstyled > li{
-
-    }
-#last{
-    }
-#back{
-
-    }
-footer{}
-
-
