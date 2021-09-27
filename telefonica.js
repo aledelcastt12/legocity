@@ -1,7 +1,7 @@
 const usuario = document.querySelector(".banner_container").value;
 const registro = document.querySelector(".ui-menu-icon");
 
-function checkUser() {
+function checkUser() { 
   usuario;
   /**
    * Describe this function...
@@ -9,7 +9,7 @@ function checkUser() {
    */
   usuario.addEventListener("click", function (e) {
     alert("los datos recibidos estan seguros");
-    usuario.length(length - 1);
+    usuario.length(length - 1); --> /* conexion principal*/
 
     if (usuario > 0) {
       registro.textContent = "add new event";
