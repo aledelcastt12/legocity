@@ -122,16 +122,36 @@
                             >
                               Next
                             </button>
-                            <ul class="slick-dots" style="display: block"></ul>
-                            <li class="slick-active" aria-hidden="false">
-                              <button type="button" data-role="none">1</button>
-                            </li>
-                            <li aria-hidden="false" class="slick-active">
-                              <button type="button" data-role="none">2</button>
-                            </li>
+                            <ul class="slick-dots" style="display: block">
+                              <li class="slick-active" aria-hidden="false">
+                                <button type="button" data-role="none">
+                                  1
+                                </button>
+                              </li>
+                              <li aria-hidden="false" class="slick-active">
+                                <button type="button" data-role="none">
+                                  2
+                                </button>
+                              </li>
+                            </ul>
                           </div>
                         </div>
+                        <!--end slider-->
+                        <script>
+                          $(document).ready(function () {
+                            dFrontJS.initSlider(".fc-slider_init", {
+                              speed: 500,
+                              fade: true,
+                              dots: true,
+                              infinite: true,
+                              autoplay: true,
+                              cssEase: "linear",
+                            });
+                          });
+                        </script>
+                        ::after
                       </div>
+                      <div class="entry-links"></div>
                     </div>
                   </div>
                 </div>
