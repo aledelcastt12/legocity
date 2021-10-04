@@ -34,8 +34,8 @@ function newUpdate{
     alert("your information is updated now")
   }
 
-
   ))
 
+var content = 0;
 
 
