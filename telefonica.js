@@ -37,5 +37,9 @@ function newUpdate{
   ))
 
 var content = 0;
+/* va todo junto */
+
+
+
 
 
