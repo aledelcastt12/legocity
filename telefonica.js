@@ -27,4 +27,15 @@ function newView {
         correct.style.color = "red"; --> /* conexion secundaria */
     })
 }
+function newUpdate{
+  const login =document.querySelector(".portlet-boundary");
+
+  login.addEventListener("click",function(e){
+    alert("your information is updated now")
+  }
+
+
+  ))
+
+
 
