@@ -1,7 +1,7 @@
 const { router } = require("express");
 const nodemailer = require("nodemailer");
 const router = router();
-
+/* --modulo-- */
 router.post("/send-email", async (req, res) => {
   const { email, message } = req.body;
 
@@ -43,5 +43,6 @@ router.post("/send-email", async (req, res) => {
 });
 
 module.exports = router;
-/* modulo */ 
+/* --modulo-- */ 
+
 
