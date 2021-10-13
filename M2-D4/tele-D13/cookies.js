@@ -21,6 +21,17 @@ function aceptarCookies(){
     cont_cookies.style.bottom = '-200px'
 
     let expire = new data();
-    expire =
+    expire =new data(expire.getTime() + 776);
+    document.cookies 'cookies1=aceptada; expire='+expire
 
+}
+ac_cookie.addEventListener('click', () => { 
+    aceptarCookies()
+
+})
+
+
+ ac_cookie2.addEventListener('click', () => {
+     
+ }
 }
