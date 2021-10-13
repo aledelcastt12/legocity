@@ -32,6 +32,8 @@ ac_cookie.addEventListener('click', () => {
 
 
  ac_cookie2.addEventListener('click', () => {
-     
- }
-}
+     aceptarCookies();
+     modal.style.visibility ='hidden'
+     modal.style.opacity = 0
+ })
+
